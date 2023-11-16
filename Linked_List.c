@@ -44,11 +44,18 @@ int count(struct Node *t){
     return 0;
 }
 
+int sum(struct Node *t){
+    if(t){
+        return sum(t->next)+t->val;
+    }
+}
+
 int main(){
     head=(struct Node*)malloc(sizeof(struct Node));
     int a[]={1,2,3,4};
     create(a,4);
     display(head);
     printf("\n\nCount of nodes is %3d",count(head));
+    printf("\n\nSum of nodes is %3d",sum(head));
     return 0;
 }
