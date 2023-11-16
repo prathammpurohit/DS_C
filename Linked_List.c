@@ -48,6 +48,7 @@ int sum(struct Node *t){
     if(t){
         return sum(t->next)+t->val;
     }
+    return 0;
 }
 
 int main(){
